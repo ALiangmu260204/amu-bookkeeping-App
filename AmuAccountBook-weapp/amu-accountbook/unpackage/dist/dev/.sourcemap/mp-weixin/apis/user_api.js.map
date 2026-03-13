@@ -1,0 +1,1 @@
+{"version":3,"file":"user_api.js","sources":["apis/user_api.js"],"sourcesContent":["import { post } from '@/utils/request'\r\n\r\nexport const userApi = {\r\n    // 用户登录\r\n    login: (js_code) => post('/user/login', { code: js_code })\r\n}"],"names":["post"],"mappings":";;AAEY,MAAC,UAAU;AAAA;AAAA,EAEnB,OAAO,CAAC,YAAYA,cAAI,KAAC,eAAe,EAAE,MAAM,SAAS;AAC7D;;"}

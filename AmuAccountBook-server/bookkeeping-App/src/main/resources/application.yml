@@ -1,0 +1,60 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /bookkeeping
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bookkeeping_app?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: ${DB_ROOT_PASSWORD:123456}
+  data:
+    redis:
+      database: 0
+      host: ${SPRING_REDIS_HOST:localhost}
+      port: ${SPRING_REDIS_PORT:6379}
+      password: null
+      timeout: 10s
+      lettuce:
+        pool:
+          # 连接池最大连接数
+          max-active: 5
+          # 连接池最大阻塞等待时间（使用负值表示没有限制）
+          max-wait: 10000ms
+          # 连接池中的最大空闲连接
+          max-idle: 4
+          # 连接池中的最小空闲连接
+          min-idle: 2
+
+logging:
+  file:
+    name: /var/log/bookkeeping-app/app.log
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB        
+      max-history: 30             
+      total-size-cap: 10GB       
+      file-name-pattern: /var/log/bookkeeping-app/app.%d{yyyy-MM-dd}.%i.log.gz  
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+sa-token:
+  token-name: accessToken
+  timeout: -1
+  active-timeout: 2591999
+  auto-renew: true
+  is-concurrent: false
+  is-share: false
+  is-log: true
+
+aliangmu:
+  wechat-mini-program:
+    appid: ${WECHAT_MINI_PROGRAM_APPID:noDefault}
+    secret: ${WECHAT_MINI_PROGRAM_SECRET:noDefault}

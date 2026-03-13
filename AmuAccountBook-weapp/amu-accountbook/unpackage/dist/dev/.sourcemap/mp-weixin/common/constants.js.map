@@ -1,0 +1,1 @@
+{"version":3,"file":"constants.js","sources":["common/constants.js"],"sourcesContent":["export default {\r\n\tBASE_URL: 'https://www.aliangmux.online/bookkeeping'\r\n}"],"names":[],"mappings":";AAAA,MAAe,YAAA;AAAA,EACd,UAAU;AACX;;"}

@@ -1,0 +1,64 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^u-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/Index/Index",
+			"style": {
+				"navigationBarTitleText": "记账"
+			}
+		},
+		{
+			"path": "pages/Report/Report",
+			"style": {
+				"navigationBarTitleText": "报表"
+			}
+		},
+		{
+			"path": "pages/My/My",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/Detail/Detail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "阿木记账",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/Index/Index",
+				"iconPath": "/static/tobBar/account-book-0.png",
+				"selectedIconPath": "/static/tobBar/account-book-1.png"
+			},
+			{
+				"pagePath": "pages/Report/Report",
+				"iconPath": "/static/tobBar/report-0.png",
+				"selectedIconPath": "/static/tobBar/report-1.png"
+			},
+			{
+				"pagePath": "pages/My/My",
+				"iconPath": "/static/tobBar/my-0.png",
+				"selectedIconPath": "/static/tobBar/my-1.png"
+			}
+		]
+	}
+}
