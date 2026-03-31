@@ -117,12 +117,6 @@ npm run dev
 
 ---
 
-## 作者
-
-喝茶阿良木
-
----
-
 ## 许可证
 
 MIT License
